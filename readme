@@ -39,5 +39,12 @@ Spring WebFlux
         c.创建包和相关类和方法
         d.创建controller
     (5).Spring WebFlux实现方式(基于函数式编程模型)
-
+        a.需要自己初始化服务器
+        b.有两个核心接口RouterFunction(路由处理：请求转发给响应的handler)和HandlerFunction(处理请求生成响应的函数)。核心任务定义两个函数式街楼的实现并且启动需要的服务器
+        c.请求和响应不再是ServletRequest和ServletResponse,而是ServerRequest和ServerResponse
+        第一步，创建Handler，替代Controller
+        第二步，初始化服务器，编写Router
+        第三步，创建服务器完成适配
+        第四步，最终调用
+               使用webClient调用
 

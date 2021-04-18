@@ -10,10 +10,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import javax.jws.soap.SOAPBinding;
-
-@RestController
+//通过函数式，不再需要Controller
+/*@RestController*/
 public class Usercontroller {
-    //注入service
+/*    //注入service
 
     @Autowired
     private UserService userService;
@@ -33,5 +33,5 @@ public class Usercontroller {
     public Mono<Void> saveUsers(@PathVariable User user){
         Mono<User> userMono = Mono.just(user);
         return userService.saveUserInfo(userMono);
-    }
+    }*/
 }
